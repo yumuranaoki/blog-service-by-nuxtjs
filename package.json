@@ -1,0 +1,21 @@
+{
+  "name": "blog-by-nuxt",
+  "version": "1.0.0",
+  "description": "blog service created by nuxt.js",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nuxt",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "kneegorilla",
+  "license": "ISC",
+  "dependencies": {
+    "@nuxtjs/auth": "^4.5.3",
+    "@nuxtjs/axios": "^5.3.6",
+    "element-ui": "^2.5.4",
+    "firebase": "^5.8.2",
+    "nuxt": "^2.4.3",
+    "universal-cookie": "^3.0.7"
+  }
+}
