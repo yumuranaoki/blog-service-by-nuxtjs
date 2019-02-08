@@ -1,3 +1,4 @@
 node_modules
 plugins/firebase.js
 .nuxt
+coverage

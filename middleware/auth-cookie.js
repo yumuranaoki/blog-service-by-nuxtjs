@@ -10,6 +10,7 @@ export default ({ req, store }) => {
 
   const cookie = new Cookies(req.headers.cookie);
   const user = cookie.get('user');
+  console.log(`user is ${user.name}`)
   if (user) {
     store.commit('setUser', user.name);
   }

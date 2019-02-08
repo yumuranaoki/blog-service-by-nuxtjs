@@ -1,19 +1,22 @@
-export const state = () => ({
+const state = () => ({
   isLoggedIn: false,
   user: null,
 });
 
-export const getters = {
+const getters = {
   isLoggedIn: (state) => state.isLoggedIn,
   user: (state) => state.user,
 };
 
-export const mutations = {
+const mutations = {
   setUser(state, text) {
     state.isLoggedIn = true;
     state.user = {name: text};
   },
-  isNotLoggedIn(state) {
-    state.isLoggedIn = false;
-  }
+}
+
+export default {
+  state,
+  getters,
+  mutations,
 }
