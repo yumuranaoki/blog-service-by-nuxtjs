@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "nuxt",
+    "build": "nuxt build",
     "test": "jest",
     "test:coverage": "jest --coverage"
   },
