@@ -18,7 +18,8 @@
       "^~/(.*)$": "<rootDir>/$1"
     },
     "moduleFileExtensions": ["js", "json", "vue"],
-    "collectCoverageFrom": ["**/*.{js,vue}"]
+    "collectCoverageFrom": ["**/*.{js,vue}"],
+    "coveragePathIgnorePatterns": ["plugins/", "nuxt.config.js", "coverage/", "middleware/"]
   },
   "babel": {
     "env": {

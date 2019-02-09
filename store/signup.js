@@ -1,20 +1,20 @@
 import firebase from '~/plugins/firebase';
 
-export const state = () => ({
+const state = () => ({
   name: 'kneegorilla',
 })
 
-export const getters = {
+const getters = {
   name: (state) => state.name,
 };
 
-export const mutations = {
+const mutations = {
   changeName(state, text) {
     state.name = text;
   }
 };
 
-export const actions = {
+const actions = {
   async changeName({ commit }, text) {
     try {
       const firestore = firebase.firestore();
@@ -25,6 +25,14 @@ export const actions = {
       console.log(err);
       throw new Error('invalid data');
     }
-    commit('setUser', text, { root: true })
+    commit('setUser', text, { root: true });
+    commit('signup/changeName', text);
   }
+}
+
+export default {
+  state,
+  getters,
+  mutations,
+  actions,
 }

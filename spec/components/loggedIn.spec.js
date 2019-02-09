@@ -1,5 +1,5 @@
-import LoggedIn from '~/components/loggedIn/index';
 import { mount } from '@vue/test-utils';
+import LoggedIn from '~/components/loggedIn/index';
 
 describe('logggedIn component', () => {
   let wrapper;
