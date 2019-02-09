@@ -1,4 +1,5 @@
 import firebase from "firebase";
+import dotenv from 'dotenv';
 
 if (!firebase.apps.length) {
   firebase.initializeApp({

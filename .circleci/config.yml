@@ -5,5 +5,12 @@ jobs:
       - image: circleci/node:8
     steps:
       - checkout
+      - run: echo APIKEY=$APIKEY > .env
+      - run: echo AUTHDOMAIN=$AUTHDOMAIN > .env
+      - run: echo DATABASEURL=$DATABASEURL > .env
+      - run: echo PROJECTID=$PROJECTID > .env
+      - run: echo STORAGEBUCKET=$STORAGEBUCKET > .env
+      - run: echo MESSAGINGSENDERID=$MESSAGINGSENDERID > .env
+      - run: cat .env
       - run: npm install
-      - run: APIKEY=$APIKEY AUTHDOMAIN=$AUTHDOMAIN DATABASEURL=$DATABASEURL PROJECTID=$PROJECTID STORAGEBUCKET=$STORAGEBUCKET MESSAGINGSENDERID=$MESSAGINGSENDERID　yarn test 
+      - run: yarn test 

@@ -13,14 +13,24 @@
     "transform": {
       "^.+\\.js$": "babel-jest",
       ".*\\.(vue)$": "vue-jest"
-
     },
     "moduleNameMapper": {
       "^~/(.*)$": "<rootDir>/$1"
     },
-    "moduleFileExtensions": ["js", "json", "vue"],
-    "collectCoverageFrom": ["**/*.{js,vue}"],
-    "coveragePathIgnorePatterns": ["plugins/", "nuxt.config.js", "coverage/", "middleware/"]
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "vue"
+    ],
+    "collectCoverageFrom": [
+      "**/*.{js,vue}"
+    ],
+    "coveragePathIgnorePatterns": [
+      "plugins/",
+      "nuxt.config.js",
+      "coverage/",
+      "middleware/"
+    ]
   },
   "babel": {
     "env": {
@@ -45,6 +55,7 @@
   "dependencies": {
     "@nuxtjs/auth": "^4.5.3",
     "@nuxtjs/axios": "^5.3.6",
+    "dotenv": "^6.2.0",
     "element-ui": "^2.5.4",
     "firebase": "^5.8.2",
     "nuxt": "^2.4.3",
