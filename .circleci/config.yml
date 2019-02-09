@@ -5,4 +5,5 @@ jobs:
       - image: circleci/node:8
     steps:
       - checkout
-      - run: echo $TEST
+      - run: npm install
+      - run: yarn test
