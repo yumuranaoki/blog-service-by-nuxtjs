@@ -5,12 +5,5 @@ jobs:
       - image: circleci/node:8
     steps:
       - checkout
-      - restore_cache:
-          keys:
-            - npm-{{ checksum "package.json" }}
       - run: npm install
-      - save_cache:
-        paths:
-          - node_modules
-        key: npm-{{ checksum "package.json" }}
       - run: yarn test
