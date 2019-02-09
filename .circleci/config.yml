@@ -5,6 +5,9 @@ jobs:
       - image: circleci/node:8
     steps:
       - checkout
+      - restore_cache:
+          keys:
+            - npm-{{ checksum "package.json" }}
       - run: echo APIKEY=$APIKEY >> .env
       - run: echo AUTHDOMAIN=$AUTHDOMAIN >> .env
       - run: echo DATABASEURL=$DATABASEURL >> .env
@@ -14,4 +17,8 @@ jobs:
       - run: echo MESSAGINGSENDERID=$MESSAGINGSENDERID >> .env
       - run: cat .env
       - run: npm install
+      - save_cache:
+          paths:
+            - node_modules
+          key: npm-{{ checksum "package.json" }}
       - run: yarn test 
